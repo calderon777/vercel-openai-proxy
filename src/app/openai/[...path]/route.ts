@@ -32,6 +32,9 @@ export async function POST(req: NextRequest, { params }: { params: { path: strin
   proxyUrl.port = "443";
   proxyUrl.protocol = "https";
 
+  console.log("Proxy URL:", proxyUrl.href);
+  console.log("Proxy Headers:", JSON.stringify(req.headers, null, 2));
+
   return fetch(proxyUrl.href, {
     method: "POST",
     headers: req.headers,

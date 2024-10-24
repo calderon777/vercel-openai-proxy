@@ -20,15 +20,15 @@ Using the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 
 ```js
 // request openai api, just replace https://api.openai.com to https://your-project-name-xxxx.vercel.app/openai/
-const response = await fetch('https://your-project-name-xxxx.vercel.app/openai/v1/chat/completions', {
-  method: 'POST',
+const response = await fetch("https://your-project-name-xxxx.vercel.app/openai/v1/chat/completions", {
+  method: "POST",
   headers: {
-    'Content-Type': 'application/json',
-    Authorization: 'Bearer OPENAI_KEY_HERE',
+    "Content-Type": "application/json",
+    Authorization: "Bearer OPENAI_KEY_HERE",
   },
   body: JSON.stringify({
-    model: 'gpt-3.5-turbo',
-    messages: [{ role: 'user', content: 'Hello, world!' }],
+    model: "gpt-3.5-turbo",
+    messages: [{ role: "user", content: "Hello, world!" }],
   }),
 });
 ```
@@ -37,9 +37,9 @@ Using the [openai](https://www.npmjs.com/package/openai) library to make a reque
 
 ```js
 const openai = new OpenAI({
-  apiKey: 'OPENAI_KEY_HERE',
+  apiKey: "OPENAI_KEY_HERE",
   // Just set the baseURL
-  baseURL: 'https://your-project-name-xxxx.vercel.app/openai/',
+  baseURL: "https://your-project-name-xxxx.vercel.app/openai/v1/",
 });
 ```
 
