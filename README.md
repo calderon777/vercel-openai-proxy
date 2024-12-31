@@ -1,3 +1,5 @@
+English | [简体中文](README_ZH.md)
+
 # Vercel Region OpenAI Proxy
 
 Use Vercel Edge Functions to proxy requests to OpenAI services, addressing accessibility issues in regions where OpenAI is unavailable (e.g., Hong Kong, Mainland China).

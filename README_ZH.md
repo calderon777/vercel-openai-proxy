@@ -1,3 +1,5 @@
+[English](README.md) | 简体中文
+
 # Vercel Region OpenAI Proxy
 
 使用 Vercel Edge Functions 代理请求 OpenAI 服务，以解决 OpenAI 在某些地区（例如香港和中国大陆）无法访问的问题。
@@ -16,29 +18,29 @@
 
 ### 示例
 
-使用 [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) 请求:
+使用 [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) 请求：
 
 ```js
-const response = await fetch('https://your-project-name-xxxx.vercel.app/openai/v1/chat/completions', {
-  method: 'POST',
+const response = await fetch("https://your-project-name-xxxx.vercel.app/openai/v1/chat/completions", {
+  method: "POST",
   headers: {
-    'Content-Type': 'application/json',
-    Authorization: 'Bearer OPENAI_KEY_HERE',
+    "Content-Type": "application/json",
+    Authorization: "Bearer OPENAI_KEY_HERE",
   },
   body: JSON.stringify({
-    model: 'gpt-3.5-turbo',
-    messages: [{ role: 'user', content: 'Hello, world!' }],
+    model: "gpt-3.5-turbo",
+    messages: [{ role: "user", content: "Hello, world!" }],
   }),
 });
 ```
 
-使用 [openai](https://www.npmjs.com/package/openai) 库请求:
+使用 [openai](https://www.npmjs.com/package/openai) 库请求：
 
 ```js
 const openai = new OpenAI({
-  apiKey: 'OPENAI_KEY_HERE',
+  apiKey: "OPENAI_KEY_HERE",
   // 设置 baseURL 即可
-  baseURL: 'https://your-project-name-xxxx.vercel.app/opeai/',
+  baseURL: "https://your-project-name-xxxx.vercel.app/openai/v1/",
 });
 ```
 
